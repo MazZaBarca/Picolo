@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		447328AC1D99B2DD00A68498 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 447328AB1D99B2DD00A68498 /* GoogleService-Info.plist */; };
 		449DA2E11D99AE9300EB8A46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DA2E01D99AE9300EB8A46 /* AppDelegate.swift */; };
 		449DA2E31D99AE9300EB8A46 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DA2E21D99AE9300EB8A46 /* SignInVC.swift */; };
 		449DA2E61D99AE9300EB8A46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449DA2E41D99AE9300EB8A46 /* Main.storyboard */; };
 		449DA2E81D99AE9300EB8A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449DA2E71D99AE9300EB8A46 /* Assets.xcassets */; };
 		449DA2EB1D99AE9300EB8A46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449DA2E91D99AE9300EB8A46 /* LaunchScreen.storyboard */; };
+		44DCDB4F1D99DA1F00D0796E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44DCDB4E1D99DA1F00D0796E /* GoogleService-Info.plist */; };
+		44DCDB521D99E28800D0796E /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DCDB511D99E28800D0796E /* FeedVC.swift */; };
 		48B538A99E3CCFD01F5FF0E5 /* Pods_Picolo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ED470A292471070D748F00 /* Pods_Picolo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		31ED470A292471070D748F00 /* Pods_Picolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Picolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		447328AB1D99B2DD00A68498 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		449DA2DD1D99AE9300EB8A46 /* Picolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449DA2E01D99AE9300EB8A46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		449DA2E21D99AE9300EB8A46 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -26,6 +26,9 @@
 		449DA2E71D99AE9300EB8A46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		449DA2EA1D99AE9300EB8A46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		449DA2EC1D99AE9300EB8A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44DCDB4E1D99DA1F00D0796E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		44DCDB501D99DB9300D0796E /* Picolo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Picolo.entitlements; sourceTree = "<group>"; };
+		44DCDB511D99E28800D0796E /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		4796BDE5C674F9C980FEC80E /* Pods-Picolo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picolo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Picolo/Pods-Picolo.debug.xcconfig"; sourceTree = "<group>"; };
 		E0B1989D20E9D0178351E241 /* Pods-Picolo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picolo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Picolo/Pods-Picolo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				449DA2E21D99AE9300EB8A46 /* SignInVC.swift */,
+				44DCDB511D99E28800D0796E /* FeedVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -110,7 +114,8 @@
 				449DA2E71D99AE9300EB8A46 /* Assets.xcassets */,
 				449DA2E91D99AE9300EB8A46 /* LaunchScreen.storyboard */,
 				449DA2EC1D99AE9300EB8A46 /* Info.plist */,
-				447328AB1D99B2DD00A68498 /* GoogleService-Info.plist */,
+				44DCDB4E1D99DA1F00D0796E /* GoogleService-Info.plist */,
+				44DCDB501D99DB9300D0796E /* Picolo.entitlements */,
 			);
 			path = Picolo;
 			sourceTree = "<group>";
@@ -150,8 +155,12 @@
 				TargetAttributes = {
 					449DA2DC1D99AE9200EB8A46 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = RRQT3NK5J3;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -179,8 +188,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				449DA2EB1D99AE9300EB8A46 /* LaunchScreen.storyboard in Resources */,
+				44DCDB4F1D99DA1F00D0796E /* GoogleService-Info.plist in Resources */,
 				449DA2E81D99AE9300EB8A46 /* Assets.xcassets in Resources */,
-				447328AC1D99B2DD00A68498 /* GoogleService-Info.plist in Resources */,
 				449DA2E61D99AE9300EB8A46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44DCDB521D99E28800D0796E /* FeedVC.swift in Sources */,
 				449DA2E31D99AE9300EB8A46 /* SignInVC.swift in Sources */,
 				449DA2E11D99AE9300EB8A46 /* AppDelegate.swift in Sources */,
 			);
@@ -365,7 +375,10 @@
 			baseConfigurationReference = 4796BDE5C674F9C980FEC80E /* Pods-Picolo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RRQT3NK5J3;
+				CODE_SIGN_ENTITLEMENTS = Picolo/Picolo.entitlements;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Picolo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -380,7 +393,10 @@
 			baseConfigurationReference = E0B1989D20E9D0178351E241 /* Pods-Picolo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = RRQT3NK5J3;
+				CODE_SIGN_ENTITLEMENTS = Picolo/Picolo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Picolo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
