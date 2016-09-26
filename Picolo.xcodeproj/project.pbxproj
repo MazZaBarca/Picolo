@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		447328AC1D99B2DD00A68498 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 447328AB1D99B2DD00A68498 /* GoogleService-Info.plist */; };
 		449DA2E11D99AE9300EB8A46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DA2E01D99AE9300EB8A46 /* AppDelegate.swift */; };
-		449DA2E31D99AE9300EB8A46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DA2E21D99AE9300EB8A46 /* ViewController.swift */; };
+		449DA2E31D99AE9300EB8A46 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DA2E21D99AE9300EB8A46 /* SignInVC.swift */; };
 		449DA2E61D99AE9300EB8A46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449DA2E41D99AE9300EB8A46 /* Main.storyboard */; };
 		449DA2E81D99AE9300EB8A46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 449DA2E71D99AE9300EB8A46 /* Assets.xcassets */; };
 		449DA2EB1D99AE9300EB8A46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449DA2E91D99AE9300EB8A46 /* LaunchScreen.storyboard */; };
+		48B538A99E3CCFD01F5FF0E5 /* Pods_Picolo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31ED470A292471070D748F00 /* Pods_Picolo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		31ED470A292471070D748F00 /* Pods_Picolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Picolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		447328AB1D99B2DD00A68498 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		449DA2DD1D99AE9300EB8A46 /* Picolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449DA2E01D99AE9300EB8A46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		449DA2E21D99AE9300EB8A46 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		449DA2E21D99AE9300EB8A46 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		449DA2E51D99AE9300EB8A46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		449DA2E71D99AE9300EB8A46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		449DA2EA1D99AE9300EB8A46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		449DA2EC1D99AE9300EB8A46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4796BDE5C674F9C980FEC80E /* Pods-Picolo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picolo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Picolo/Pods-Picolo.debug.xcconfig"; sourceTree = "<group>"; };
+		E0B1989D20E9D0178351E241 /* Pods-Picolo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Picolo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Picolo/Pods-Picolo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48B538A99E3CCFD01F5FF0E5 /* Pods_Picolo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A036AB28A081A6521ECBAED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31ED470A292471070D748F00 /* Pods_Picolo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		275F2C0DA243D5795C78F1D7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4796BDE5C674F9C980FEC80E /* Pods-Picolo.debug.xcconfig */,
+				E0B1989D20E9D0178351E241 /* Pods-Picolo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		44049B191D99B53F00146DF2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		44049B1A1D99B54800146DF2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		44049B1B1D99B55300146DF2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				449DA2E21D99AE9300EB8A46 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		449DA2D41D99AE9200EB8A46 = {
 			isa = PBXGroup;
 			children = (
 				449DA2DF1D99AE9300EB8A46 /* Picolo */,
 				449DA2DE1D99AE9300EB8A46 /* Products */,
+				275F2C0DA243D5795C78F1D7 /* Pods */,
+				0A036AB28A081A6521ECBAED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +102,15 @@
 		449DA2DF1D99AE9300EB8A46 /* Picolo */ = {
 			isa = PBXGroup;
 			children = (
+				44049B191D99B53F00146DF2 /* Model */,
+				44049B1B1D99B55300146DF2 /* Controller */,
+				44049B1A1D99B54800146DF2 /* View */,
 				449DA2E01D99AE9300EB8A46 /* AppDelegate.swift */,
-				449DA2E21D99AE9300EB8A46 /* ViewController.swift */,
 				449DA2E41D99AE9300EB8A46 /* Main.storyboard */,
 				449DA2E71D99AE9300EB8A46 /* Assets.xcassets */,
 				449DA2E91D99AE9300EB8A46 /* LaunchScreen.storyboard */,
 				449DA2EC1D99AE9300EB8A46 /* Info.plist */,
+				447328AB1D99B2DD00A68498 /* GoogleService-Info.plist */,
 			);
 			path = Picolo;
 			sourceTree = "<group>";
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 449DA2EF1D99AE9300EB8A46 /* Build configuration list for PBXNativeTarget "Picolo" */;
 			buildPhases = (
+				7C1FF982741E4018CEEB409D /* [CP] Check Pods Manifest.lock */,
 				449DA2D91D99AE9200EB8A46 /* Sources */,
 				449DA2DA1D99AE9200EB8A46 /* Frameworks */,
 				449DA2DB1D99AE9200EB8A46 /* Resources */,
+				845D1C3E45182C7211441D93 /* [CP] Embed Pods Frameworks */,
+				EBCB3C7E62145FD6C86C11B3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -126,18 +180,67 @@
 			files = (
 				449DA2EB1D99AE9300EB8A46 /* LaunchScreen.storyboard in Resources */,
 				449DA2E81D99AE9300EB8A46 /* Assets.xcassets in Resources */,
+				447328AC1D99B2DD00A68498 /* GoogleService-Info.plist in Resources */,
 				449DA2E61D99AE9300EB8A46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C1FF982741E4018CEEB409D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		845D1C3E45182C7211441D93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Picolo/Pods-Picolo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBCB3C7E62145FD6C86C11B3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Picolo/Pods-Picolo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		449DA2D91D99AE9200EB8A46 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				449DA2E31D99AE9300EB8A46 /* ViewController.swift in Sources */,
+				449DA2E31D99AE9300EB8A46 /* SignInVC.swift in Sources */,
 				449DA2E11D99AE9300EB8A46 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,10 +362,12 @@
 		};
 		449DA2F01D99AE9300EB8A46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4796BDE5C674F9C980FEC80E /* Pods-Picolo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RRQT3NK5J3;
 				INFOPLIST_FILE = Picolo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = filipmazic.Picolo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,10 +377,12 @@
 		};
 		449DA2F11D99AE9300EB8A46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0B1989D20E9D0178351E241 /* Pods-Picolo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RRQT3NK5J3;
 				INFOPLIST_FILE = Picolo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = filipmazic.Picolo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +409,7 @@
 				449DA2F11D99AE9300EB8A46 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
