@@ -56,7 +56,7 @@
                     <connections>
                         <outlet property="emailField" destination="a1j-jx-fPe" id="Cya-6y-CAA"/>
                         <outlet property="pwdField" destination="ZWm-XD-2Om" id="Udh-QQ-K9G"/>
-                        <segue destination="MKU-At-DAY" kind="show" identifier="goToFeed" id="I3Q-bQ-zQ5"/>
+                        <segue destination="RNy-jH-h8u" kind="show" identifier="goToFeed" id="S9d-Ya-7lv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,22 +64,122 @@
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
         <!--FeedVC-->
-        <scene sceneID="yXs-bU-UUc">
+        <scene sceneID="n6p-bJ-8A4">
             <objects>
-                <viewController id="MKU-At-DAY" customClass="FeedVC" customModule="Picolo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RNy-jH-h8u" customClass="FeedVC" customModule="Picolo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="PNP-Ph-2Ct"/>
-                        <viewControllerLayoutGuide type="bottom" id="zLI-kQ-ycZ"/>
+                        <viewControllerLayoutGuide type="top" id="Bdu-sn-VN4"/>
+                        <viewControllerLayoutGuide type="bottom" id="6CW-ic-rI8"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5Pk-zP-G4Y">
+                    <view key="view" contentMode="scaleToFill" id="oWx-uh-6sx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7t-BZ-Ukc">
+                                <frame key="frameInset" minX="294" minY="616" width="81" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="profile"/>
+                                <connections>
+                                    <action selector="profileTapped:" destination="RNy-jH-h8u" eventType="touchUpInside" id="N7I-a9-kdh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGA-26-9tC">
+                                <frame key="frameInset" minY="616" width="78" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="pencil"/>
+                                <connections>
+                                    <action selector="pencilTapped:" destination="RNy-jH-h8u" eventType="touchUpInside" id="lqh-91-J45"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="339" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6N2-L4-khv">
+                                <frame key="frameInset" minY="81" width="375" height="527"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="339" id="ihn-uk-gNV" customClass="PostCell" customModule="Picolo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="339"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ihn-uk-gNV" id="QI5-aF-ubE">
+                                            <frame key="frameInset" width="375" height="338"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MYR-wj-PXZ">
+                                                    <frame key="frameInset" minX="8" minY="8" width="359" height="298"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iiiiip" translatesAutoresizingMaskIntoConstraints="NO" id="lzI-j7-ItL">
+                                                            <frame key="frameInset" minX="-9" minY="38" width="375" height="241"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="mazza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGi-sr-IFR">
+                                                            <frame key="frameInset" minX="8" minY="9" width="351" height="21"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fm4-Xm-gz2">
+                                                    <frame key="frameInset" minX="8" minY="302" width="86" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="heart_stroke"/>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xef-ah-2ku">
+                                                    <frame key="frameInset" minX="308" minY="302" width="42" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="666" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11Z-ES-heE">
+                                                    <frame key="frameInset" minX="268" minY="302" width="32" height="26"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likesLbl" destination="11Z-ES-heE" id="69h-wE-R5d"/>
+                                            <outlet property="postImg" destination="lzI-j7-ItL" id="T2H-32-YS6"/>
+                                            <outlet property="usernameLbl" destination="NGi-sr-IFR" id="x9t-zg-YMH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORQ-ob-yPD">
+                                <frame key="frameInset" minX="320" minY="32" width="39" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="logout">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="RNy-jH-h8u" eventType="touchUpInside" id="ycu-uj-5lI"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="6N2-L4-khv" id="trS-qw-zAe"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="cu6-t3-Q5a"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gdR-vR-TSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pyT-sa-xIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="124"/>
+            <point key="canvasLocation" x="904.79999999999995" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart_stroke" width="32" height="28"/>
+        <image name="iiiiip" width="750" height="659"/>
+        <image name="logout" width="32" height="32"/>
+        <image name="pencil" width="256" height="256"/>
+        <image name="profile" width="225" height="225"/>
+    </resources>
 </document>

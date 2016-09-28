@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4470A08C1D9B3841002A4050 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4470A08B1D9B3841002A4050 /* PostCell.swift */; };
 		449DA2E11D99AE9300EB8A46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DA2E01D99AE9300EB8A46 /* AppDelegate.swift */; };
 		449DA2E31D99AE9300EB8A46 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DA2E21D99AE9300EB8A46 /* SignInVC.swift */; };
 		449DA2E61D99AE9300EB8A46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449DA2E41D99AE9300EB8A46 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		31ED470A292471070D748F00 /* Pods_Picolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Picolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4470A08B1D9B3841002A4050 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		449DA2DD1D99AE9300EB8A46 /* Picolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449DA2E01D99AE9300EB8A46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		449DA2E21D99AE9300EB8A46 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		44049B1A1D99B54800146DF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4470A08B1D9B3841002A4050 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				44DCDB521D99E28800D0796E /* FeedVC.swift in Sources */,
 				449DA2E31D99AE9300EB8A46 /* SignInVC.swift in Sources */,
 				449DA2E11D99AE9300EB8A46 /* AppDelegate.swift in Sources */,
+				4470A08C1D9B3841002A4050 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
