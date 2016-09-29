@@ -35,6 +35,9 @@ class SignInVC: UIViewController {
         }
     }
     
+    override var shouldAutorotate: Bool {
+        return false
+    }    
     
 
     @IBAction func signInTapped(_ sender: AnyObject) {
@@ -42,21 +45,31 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("User auth with Firebase")
-                    UserDefaults.standard.setValue(user!.uid, forKey: "uid")
-                    self.performSegue(withIdentifier: "goToFeed", sender: nil)
+                    if let user = user {
+                        let userData = ["provider": user.providerID]
+                        self.completeSignIn(id: user.uid, userData: userData)
+                    }
                 } else {
                     FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
                         if error != nil {
                             print("Unable to auth with Firebase")
                         } else {
                             print("Successfully auth with Firebase")
-                            UserDefaults.standard.setValue(user!.uid, forKey: "uid")
-                            self.performSegue(withIdentifier: "goToFeed", sender: nil)
+                            if let user = user {
+                                let userData = ["provider": user.providerID]
+                                self.completeSignIn(id: user.uid, userData: userData)
+                            }
                         }
                     })
                 }
             })
         }
+    }
+    
+    func completeSignIn(id: String, userData: Dictionary<String, String>) {
+        DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
+        UserDefaults.standard.setValue(id, forKey: "uid")
+        self.performSegue(withIdentifier: "goToFeed", sender: nil)
     }
     
 

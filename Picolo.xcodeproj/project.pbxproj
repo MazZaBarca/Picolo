@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4470A08C1D9B3841002A4050 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4470A08B1D9B3841002A4050 /* PostCell.swift */; };
+		4470A08F1D9BCE8C002A4050 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4470A08E1D9BCE8C002A4050 /* DataService.swift */; };
+		4470A0911D9BE3AB002A4050 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4470A0901D9BE3AB002A4050 /* Post.swift */; };
+		4470A0931D9C27B9002A4050 /* DrawVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4470A0921D9C27B9002A4050 /* DrawVC.swift */; };
+		447A6AF91D9C921400768798 /* PreviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447A6AF81D9C921400768798 /* PreviewVC.swift */; };
 		449DA2E11D99AE9300EB8A46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DA2E01D99AE9300EB8A46 /* AppDelegate.swift */; };
 		449DA2E31D99AE9300EB8A46 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449DA2E21D99AE9300EB8A46 /* SignInVC.swift */; };
 		449DA2E61D99AE9300EB8A46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 449DA2E41D99AE9300EB8A46 /* Main.storyboard */; };
@@ -21,6 +25,10 @@
 /* Begin PBXFileReference section */
 		31ED470A292471070D748F00 /* Pods_Picolo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Picolo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4470A08B1D9B3841002A4050 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		4470A08E1D9BCE8C002A4050 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		4470A0901D9BE3AB002A4050 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		4470A0921D9C27B9002A4050 /* DrawVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawVC.swift; sourceTree = "<group>"; };
+		447A6AF81D9C921400768798 /* PreviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewVC.swift; sourceTree = "<group>"; };
 		449DA2DD1D99AE9300EB8A46 /* Picolo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Picolo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		449DA2E01D99AE9300EB8A46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		449DA2E21D99AE9300EB8A46 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -67,6 +75,7 @@
 		44049B191D99B53F00146DF2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4470A0901D9BE3AB002A4050 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -84,8 +93,18 @@
 			children = (
 				449DA2E21D99AE9300EB8A46 /* SignInVC.swift */,
 				44DCDB511D99E28800D0796E /* FeedVC.swift */,
+				4470A0921D9C27B9002A4050 /* DrawVC.swift */,
+				447A6AF81D9C921400768798 /* PreviewVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		4470A08D1D9BCE6C002A4050 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4470A08E1D9BCE8C002A4050 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		449DA2D41D99AE9200EB8A46 = {
@@ -109,6 +128,7 @@
 		449DA2DF1D99AE9300EB8A46 /* Picolo */ = {
 			isa = PBXGroup;
 			children = (
+				4470A08D1D9BCE6C002A4050 /* Services */,
 				44049B191D99B53F00146DF2 /* Model */,
 				44049B1B1D99B55300146DF2 /* Controller */,
 				44049B1A1D99B54800146DF2 /* View */,
@@ -255,7 +275,11 @@
 				44DCDB521D99E28800D0796E /* FeedVC.swift in Sources */,
 				449DA2E31D99AE9300EB8A46 /* SignInVC.swift in Sources */,
 				449DA2E11D99AE9300EB8A46 /* AppDelegate.swift in Sources */,
+				4470A0911D9BE3AB002A4050 /* Post.swift in Sources */,
+				4470A0931D9C27B9002A4050 /* DrawVC.swift in Sources */,
+				447A6AF91D9C921400768798 /* PreviewVC.swift in Sources */,
 				4470A08C1D9B3841002A4050 /* PostCell.swift in Sources */,
+				4470A08F1D9BCE8C002A4050 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
