@@ -16,6 +16,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var drawBtn: UIButton!
     @IBOutlet weak var profileBtn: UIButton!
     
+    
     var posts = [Post]()
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
 
@@ -104,7 +105,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
 
     @IBAction func signOutTapped(_ sender: AnyObject) {
-        UserDefaults.standard.removeObject(forKey: "uid")
+        UserDefaults.standard.removeObject(forKey: KEY_UID)
         try! FIRAuth.auth()?.signOut()
         performSegue(withIdentifier: "goToSignIn", sender: nil)
     }

@@ -36,6 +36,18 @@ class DataService {
         return _REF_USERS
     }
     
+    var REF_USER_CURRENT: FIRDatabaseReference {
+        let uid = UserDefaults.standard.value(forKey: KEY_UID)
+        let user = REF_USERS.child(uid as! String)
+        return user
+    }
+    
+    var REF_USER_POSTS: FIRDatabaseReference {
+        let uid = UserDefaults.standard.value(forKey: KEY_UID)
+        let posts = REF_USERS.child(uid as! String).child("posts")
+        return posts
+    }
+    
     var REF_POST_IMAGES: FIRStorageReference {
         return _REF_POST_IMAGES
     }

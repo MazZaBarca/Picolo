@@ -19,16 +19,10 @@ class SignInVC: UIViewController {
         super.viewDidLoad()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)        
         
-        if UserDefaults.standard.value(forKey: "uid") != nil {
+        if UserDefaults.standard.value(forKey: KEY_UID) != nil {
             self.performSegue(withIdentifier: "goToFeed", sender: nil)
             
             
@@ -41,7 +35,7 @@ class SignInVC: UIViewController {
     
 
     @IBAction func signInTapped(_ sender: AnyObject) {
-        if let email = emailField.text, let pwd = pwdField.text {
+        if let email = emailField.text, email != "", let pwd = pwdField.text, pwd != "" {
             FIRAuth.auth()?.signIn(withEmail: email, password: pwd, completion: { (user, error) in
                 if error == nil {
                     print("User auth with Firebase")
@@ -50,26 +44,25 @@ class SignInVC: UIViewController {
                         self.completeSignIn(id: user.uid, userData: userData)
                     }
                 } else {
-                    FIRAuth.auth()?.createUser(withEmail: email, password: pwd, completion: { (user, error) in
-                        if error != nil {
-                            print("Unable to auth with Firebase")
-                        } else {
-                            print("Successfully auth with Firebase")
-                            if let user = user {
-                                let userData = ["provider": user.providerID]
-                                self.completeSignIn(id: user.uid, userData: userData)
-                            }
-                        }
-                    })
+                    self.showErrorAlert("Wrong credential", msg: "Invalid email address and password")
                 }
             })
+        } else {
+            self.showErrorAlert("Email and password required", msg: "Please enter email address and password")
         }
     }
     
     func completeSignIn(id: String, userData: Dictionary<String, String>) {
         DataService.ds.createFirebaseDBUser(uid: id, userData: userData)
-        UserDefaults.standard.setValue(id, forKey: "uid")
+        UserDefaults.standard.setValue(id, forKey: KEY_UID)
         self.performSegue(withIdentifier: "goToFeed", sender: nil)
+    }
+    
+    func showErrorAlert(_ title: String, msg: String) {
+        let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
 
